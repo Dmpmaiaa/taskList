@@ -3,3 +3,12 @@
     
 }
 
+.liItem{
+    position: relative;
+    padding: 4px;
+    max-width: 50dvw;
+    min-width: 25vw;
+    display: flex;
+    justify-content: space-between;
+}
+

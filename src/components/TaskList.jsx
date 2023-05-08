@@ -17,7 +17,7 @@ export function TaskList(props) {
     const handleSubmit = e => {
         e.preventDefault()
 
-        if (inputValue.length > 0) {
+        if (inputValue.length > 0 && tasks.length < 14) {
             setTasks(prevState => (
                 [...prevState,
                 {
@@ -30,6 +30,8 @@ export function TaskList(props) {
             ))
 
             setInputValue("")
+        } else{
+            alert('Too many items in the list, or input not valid.')
         }
     }
 

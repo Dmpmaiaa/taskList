@@ -4,20 +4,26 @@ export function Element({ tasks, ...props }) {
     return (
         <>
             {tasks.map((task, idx) => (
-                <li className={tasks[idx].completed ? styles.completed : styles.uncompleted} key={task.id}>
+                <li className={
+                    [
+                        styles.liItem,
+                        tasks[idx].completed ? styles.completed : styles.uncompleted,
+                    ].join(' ')
+                } key={task.id}>
 
                     <button onClick={() => props.editTask(idx)}>
                         Edit
                     </button>
 
-                    <span className={`${styles.content} ${styles.cenas}`}>{task.content}</span>
+                    <span>{task.content}</span>
+                    <div>
+                        <input type="checkbox" onChange={() => props.markAsCompleted(task.id)} />
 
-                    <input type="checkbox" onChange={() => props.markAsCompleted(task.id)} />
-
-                    <button
-                        onClick={() => props.delete(idx)}>
-                        Remove
-                    </button>
+                        <button
+                            onClick={() => props.delete(idx)}>
+                            Remove
+                        </button>
+                    </div>
                 </li>
 
             ))}

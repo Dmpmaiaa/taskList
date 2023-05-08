@@ -7,6 +7,10 @@
     background-color: var(--color-bg-contrast);
     border-radius: 25px;
     margin-bottom: 2rem;
+  
+}
+
+h1{
     font-family: var(--font-main);
     color: var(--font-color-light)
 }
