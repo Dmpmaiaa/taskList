@@ -36,13 +36,23 @@ export function TaskList(props) {
     const handleDelete = (idx) => {
         setTasks(tasks.filter((_, i) => idx !== i))
     }
-
-
+    
+    // Manages complettion of task with checkbox
     const handleCheckbox = (id) => {
         setTasks(prevState =>
             prevState.map((ele) => ele.id === id ? { ...ele, completed: !ele.completed } : ele))
 
     }
+
+    //Manages edits
+    const handleEdit = (idx) => {
+        setTasks(prevState => 
+            prevState.map((ele, i) => (
+                idx === i ? {...ele, editing: !ele.editing} : ele))
+        )
+                
+        }
+
 
 
     return (
@@ -62,7 +72,8 @@ export function TaskList(props) {
                 <Element
                     tasks={tasks}
                     delete={(idx) => handleDelete(idx)}
-                    markAsCompleted={(id) => handleCheckbox(id)} />
+                    markAsCompleted={(id) => handleCheckbox(id)}
+                    editTask={(i) => handleEdit(i)} />
             </ul>
 
         </>

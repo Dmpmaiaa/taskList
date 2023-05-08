@@ -6,11 +6,11 @@ export function Element({ tasks, ...props }) {
             {tasks.map((task, idx) => (
                 <li className={tasks[idx].completed ? styles.completed : styles.uncompleted}   key={task.id}>
                     
-                    <button>
+                    <button onClick={() => props.editTask(idx)}>
                         Edit
                     </button>
 
-                    {task.content}
+                     <span>{task.content}</span>
 
                     <input type="checkbox" onChange={() => props.markAsCompleted(task.id)}/>
 
