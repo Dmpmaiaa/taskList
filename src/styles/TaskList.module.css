@@ -27,7 +27,7 @@ form{
     
         box-shadow: none;
         outline: none;
-        caret-color: var(--font-color-light);
+        caret-color: var(--font-color-lightest);
     
 }
 
@@ -38,6 +38,6 @@ ul{
     justify-content: center;
     padding: 0;
     font-family: var(--font-main);
-    color: var(--font-color-light);
+    color: var(--font-color-lightest);
 
 }

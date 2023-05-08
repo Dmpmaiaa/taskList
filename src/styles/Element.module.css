@@ -1,6 +1,6 @@
-.completed{
+.completed {
     text-decoration: line-through;
-    
+    color: var(--font-color-lighter)
 }
 
 .liItem{
@@ -9,6 +9,23 @@
     max-width: 50dvw;
     min-width: 25vw;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    transition: all 0.8s ease;
+
 }
 
+
+.editBtn{
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    
+}
+
+.pencil{
+    fill: white
+
+}

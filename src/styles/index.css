@@ -4,7 +4,8 @@
     --color-bg-primary: #6b728e; 
     --color-bg-contrast: #404258;
     --font-main: 'Syne Mono', monospace;
-    --font-color-light: #e6e6e6;
+    --font-color-lightest: #e6e6e6;
+    --font-color-lighter: rgba(230, 230 ,230, 0.3)
 }
 
 

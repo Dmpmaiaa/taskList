@@ -1,4 +1,5 @@
 import styles from '../styles/Element.module.css'
+import { FaPencilAlt } from "react-icons/fa";
 
 export function Element({ tasks, ...props }) {
     return (
@@ -11,8 +12,8 @@ export function Element({ tasks, ...props }) {
                     ].join(' ')
                 } key={task.id}>
 
-                    <button onClick={() => props.editTask(idx)}>
-                        Edit
+                    <button  className={styles.editBtn} onClick={() => props.editTask(idx)}>
+                       <FaPencilAlt className={styles.pencil}/>
                     </button>
 
                     <span>{task.content}</span>
