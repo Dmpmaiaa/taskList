@@ -1,3 +1,22 @@
-#root{
-    
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+:root{
+    --color-bg-primary: #6b728e; 
+    --color-bg-contrast: #404258;
+    --font-main: 'Syne Mono', monospace;
+    --font-color-light: #e6e6e6;
 }
+
+
+
+body{
+    background-color: var(--color-bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    overflow: hidden;
+    
+  
+}
+

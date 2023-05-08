@@ -1,0 +1,34 @@
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+.mainInput{
+    background-color: var(--color-bg-main);
+    box-shadow: none;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid var(--font-color-light);
+    font-family: var(--font-main);
+    color: var(--font-color-light)
+
+
+}
+
+.mainInput:focus{
+    
+        box-shadow: none;
+        outline: none;
+        caret-color: var(--font-color-light);
+    
+}
+
+
+.liItem{
+    color: blue
+}
+
+.content{
+    color: red;
+}

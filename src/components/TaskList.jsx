@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Element } from "./Element"
 import { v4 as uuidv4 } from 'uuid'
+import styles from "../styles/TaskList.module.css"
 
 export function TaskList(props) {
     const [tasks, setTasks] = useState([])
@@ -56,9 +57,11 @@ export function TaskList(props) {
 
 
     return (
-        <>
+        <div className={styles.wrapper}>
             <form onSubmit={(e) => handleSubmit(e)} >
                 <input
+                    className={styles.mainInput}
+                    autoComplete="off"
                     value={inputValue}
                     placeholder="Add tasks" name="tasks"
                     onChange={(e) => handleChange(e)}
@@ -76,6 +79,6 @@ export function TaskList(props) {
                     editTask={(i) => handleEdit(i)} />
             </ul>
 
-        </>
+        </div>
     )
 }
